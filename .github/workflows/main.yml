@@ -30,9 +30,11 @@ jobs:
         working-directory: src
         run: |
           npm install
+          mkdir -p ./configs
           echo "UPLOAD_DIR=${{ env.UPLOAD_DIR }}" > .env
           echo "ORIGIN=${{ vars.ORIGIN }}" >> .env
-          echo "${{ vars.PROFILES }}" > ./PROFILES
+          echo "${{ vars.CLASH }}" > ./configs/CLASH
+          echo "${{ vars.QUANTUMULT }}" > ./configs/QUANTUMULT
           node index.js
 
       - name: Upload files to R2 bucket

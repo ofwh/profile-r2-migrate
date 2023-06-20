@@ -20,5 +20,6 @@
 
 | Name字段 | Value字段 |
 | ----- | ----- |
-| `PROFILES` | 填写Profile配置完整链接地址，一行一个 |
+| `CLASH` | 填写 Clash 配置完整链接地址，一行一个 |
+| `QUANTUMULT` | 填写 QUANTUMULT 配置完整链接地址，一行一个 |
 | `ORIGIN` | 填写新的链接域名地址，如 `https://demo.example.com` |
