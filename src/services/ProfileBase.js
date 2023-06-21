@@ -62,36 +62,44 @@ export default class ProfileBase {
       const uri = new URL(url);
       const pathname = `/${folder || assetsDir}/${uri.pathname}`;
 
-      // 从链接地址的页面内容中，找到需要更新到新链接的资源信息列表
-      let assets = [];
-      if (folder === this.profileDir || recursive) {
-        // 只对配置文件，或者明确标记需要递归时，才对内容进行分析处理
-        assets = await this.filterAssets(body);
-      }
-
-      // 循环下载并处理资源列表
-      if (Array.isArray(assets) && assets.length > 0) {
-        for (const asset of assets) {
-          const { url: assetUrl } = asset;
-
-          // 递归处理子资源
-          const { newUrl, handled, assets: subAssets = [] } = await this.handleRes(assetUrl, assetsDir);
-
-          // 如果子资源已经成功下载，则替换当前网页内容中的实际链接地址为新的资源地址
-          if (handled) {
-            body = body.replace(new RegExp(assetUrl, 'g'), newUrl);
-          }
-
-          // 扩展相关信息到资源列表中
-          Object.assign(asset, { newUrl, handled, assets: subAssets });
-        }
-      }
-
       const file = `${rootPath}/${pathname}`; // 文件保存路径(本地物理路径)
       const { dir: filePath } = path.parse(file); // 解析出文件所在的目录
+      // 从链接地址的页面内容中，找到需要更新到新链接的资源信息列表
+      let assets = [];
 
-      utils.mkdirSync(filePath); // 文件的目录需要先递归创建好，否则会写入文件失败
-      fs.writeFileSync(file, body, { encoding: 'utf-8' }); // 写入文件内容
+      // 文件的目录需要先递归创建好，否则会写入文件失败
+      utils.mkdirSync(filePath);
+
+      if (body instanceof Buffer) {
+        // 图片文件
+        fs.writeFileSync(file, body);
+      } else {
+        if (folder === this.profileDir || recursive) {
+          // 只对配置文件，或者明确标记需要递归时，才对内容进行分析处理
+          assets = await this.filterAssets(body);
+        }
+
+        // 循环下载并处理资源列表
+        if (Array.isArray(assets) && assets.length > 0) {
+          for (const asset of assets) {
+            const { url: assetUrl } = asset;
+
+            // 递归处理子资源
+            const { newUrl, handled, assets: subAssets = [] } = await this.handleRes(assetUrl, assetsDir);
+
+            // 如果子资源已经成功下载，则替换当前网页内容中的实际链接地址为新的资源地址
+            if (handled) {
+              body = body.replace(new RegExp(assetUrl, 'g'), newUrl);
+            }
+
+            // 扩展相关信息到资源列表中
+            Object.assign(asset, { newUrl, handled, assets: subAssets });
+          }
+        }
+
+        fs.writeFileSync(file, body, { encoding: 'utf-8' }); // 写入文件内容
+      }
+
       console.log(`[INFO] 资源处理完成 ${logUrl}`);
 
       const info = {

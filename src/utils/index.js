@@ -1,6 +1,5 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import ini from 'ini';
 
 const desensitize = (link) => {
   const uri = new URL(link);
@@ -28,7 +27,18 @@ const request = async (url, { method = 'GET', headers = {} } = {}) => {
       },
     });
     const { status, ok } = response;
-    const body = await response.text();
+
+    const isPicture = ['.png', '.jpg', '.jpeg', '.bmp'].some((ext) => url.endsWith(ext));
+    let body;
+
+    if (isPicture) {
+      const blob = await response.blob();
+      const arrayBuffer = await blob.arrayBuffer();
+
+      body = Buffer.from(arrayBuffer);
+    } else {
+      body = await response.text();
+    }
 
     return { ok, status, body };
   } catch (e) {
