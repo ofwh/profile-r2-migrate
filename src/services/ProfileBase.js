@@ -10,7 +10,10 @@ export default class ProfileBase {
   rootPath = '';
 
   profileDir = 'profiles'; // 配置文件保存的目录
-  rulesetDir = 'assets'; // 关联资源保存的目录
+  assetsDir = 'assets'; // 关联资源保存的目录
+  recursive = false; // 是否递归处理配置（即出了处理配置文件，同时递归处理关联的资源文件）
+
+  urls = {}; // 已加载的资源文件信息
 
   constructor(options = {}) {
     const { dir = '', url = '', origin = '' } = options;
@@ -18,58 +21,108 @@ export default class ProfileBase {
     this.url = url;
     this.origin = origin;
     this.rootDir = dir;
-    this.rootPath = this.createPath(dir);
-
-    utils.mkdirSync(this.rootPath);
+    this.rootPath = path.join(process.cwd(), `./${dir}`);
   }
 
-  createPath(pathname) {
-    return path.join(process.cwd(), `./${this.rootDir}`, `./${pathname}`);
+  /**
+   * 【抽象函数】过滤出需要处理的资源链接信息，子类需要重写此函数
+   * @param {string} content 资源内容
+   * @example
+   *
+   * ```
+   * const content = await utils.request(url);
+   * const assets = this.filterAssets(content);
+   * console.log(assets); // [{url: 'xxx', file: '/path/to/assets/filename.ext', handled: true}]
+   * ```
+   */
+  async filterAssets(content) {
+    return [];
   }
 
-  async generate() {
-    const { url, profileDir, rulesetDir, rootPath } = this;
+  /**
+   * 下载url资源并对下载后的资源内容进行处理
+   * @param {string} url 资源地址
+   * @param {string} folder 保存到的目录名称，支持目录层级。默认为资源目录（如果是配置目录可实际传值）
+   * @returns {object} 资源对象
+   */
+  async handleRes(url, folder = '') {
+    const logUrl = utils.desensitize(url);
+    const cache = this.urls[url];
 
-    // 获取配置的内容
-    console.log(`[INFO] 开始下载配置文件：${utils.desensitize(url)}`);
-    let content = await utils.request(url);
-    console.log(`[INFO] 配置文件下载完成，文件长度为 ${content.length}`);
+    if (cache) {
+      // 之前处理过的资源，直接返回
+      return cache;
+    }
 
-    if (content) {
-      // 解析内容，获取关联的资源链接 (关联资源放到ruleset目录)
-      const ruleset = this.transform(content, `${rootPath}/${rulesetDir}/`);
+    let { ok, status, body } = await utils.request(url);
 
-      // 递归下载
-      for (const rule of ruleset) {
-        const { url, filePath } = rule;
-        rule.downloaded = await utils.downloadFile(url, filePath);
+    if (ok) {
+      // 文件下载成功
+      const { origin, rootPath, assetsDir, recursive, urls } = this;
+      const uri = new URL(url);
+      const pathname = `/${folder || assetsDir}/${uri.pathname}`;
+
+      // 从链接地址的页面内容中，找到需要更新到新链接的资源信息列表
+      let assets = [];
+      if (folder === this.profileDir || recursive) {
+        // 只对配置文件，或者明确标记需要递归时，才对内容进行分析处理
+        assets = await this.filterAssets(body);
       }
 
-      // 替换原有资源内容
-      const origin = this.origin;
-      ruleset.forEach((rule) => {
-        const { url, downloaded } = rule;
+      // 循环下载并处理资源列表
+      if (Array.isArray(assets) && assets.length > 0) {
+        for (const asset of assets) {
+          const { url: assetUrl } = asset;
 
-        if (downloaded) {
-          // 文件下载成功了才替换
-          const newUrl = utils.replaceUrlOrigin(url, `${origin}/${rulesetDir}/`);
+          // 递归处理子资源
+          const { newUrl, handled, assets: subAssets = [] } = await this.handleRes(assetUrl, assetsDir);
 
-          content = content.replace(url, newUrl);
+          // 如果子资源已经成功下载，则替换当前网页内容中的实际链接地址为新的资源地址
+          if (handled) {
+            body = body.replace(new RegExp(assetUrl, 'g'), newUrl);
+          }
+
+          // 扩展相关信息到资源列表中
+          Object.assign(asset, { newUrl, handled, assets: subAssets });
         }
-      });
+      }
 
-      // 写入配置文件
-      const uri = new URL(url);
-      const { base: fileName, dir: relativeDir } = path.parse(uri.pathname);
-      const fileDir = this.createPath(path.join(profileDir, `./${relativeDir}/`));
-      const filePath = path.join(fileDir, fileName);
+      const file = `${rootPath}/${pathname}`; // 文件保存路径(本地物理路径)
+      const { dir: filePath } = path.parse(file); // 解析出文件所在的目录
 
-      utils.mkdirSync(fileDir);
-      fs.writeFileSync(filePath, content, { encoding: 'utf-8' });
+      utils.mkdirSync(filePath); // 文件的目录需要先递归创建好，否则会写入文件失败
+      fs.writeFileSync(file, body, { encoding: 'utf-8' }); // 写入文件内容
+      console.log(`[INFO] 资源处理完成 ${logUrl}`);
 
-      console.log(`[INFO] 配置文件路径: ${filePath}`);
-    } else {
-      console.error(`[ERROR] 获取配置资源失败 ${utils.desensitize(url)}`);
+      const info = {
+        url,
+        newUrl: utils.normalizeUrl(`${origin}/${pathname}`),
+        handled: true,
+        assets,
+      };
+
+      urls[url] = info;
+
+      return info;
     }
+
+    console.error(`[ERROR] 资源下载失败，跳过处理 ${logUrl}`);
+    return {
+      url,
+      newUrl: url, // 资源内容为空（下载失败）则不进行链接替换
+      handled: false,
+      assets: [],
+    };
+  }
+
+  async run() {
+    const { url, profileDir } = this;
+    const logUrl = utils.desensitize(url);
+
+    console.log(`[INFO] 开始处理配置文件 ${logUrl}`);
+    const results = await this.handleRes(url, profileDir);
+    console.log(`[INFO] 配置文件处理完成 ${logUrl}`);
+
+    return results;
   }
 }

@@ -21,7 +21,7 @@ export default class ClashController {
     for (const url of urls) {
       const profile = new ClashProfile({ url, dir, origin });
 
-      await profile.generate();
+      await profile.run();
     }
 
     console.log(`[INFO] Clash 配置处理完成，详情请查看处理日志`);

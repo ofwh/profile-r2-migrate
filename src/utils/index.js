@@ -12,9 +12,13 @@ const mkdirSync = (dir) => {
   fs.mkdirSync(dir, { recursive: true });
 };
 
+const normalizeUrl = (url) => {
+  // 替换除协议外的连续多斜杠为单斜杠
+  return url.replace(/(?<!:)\/+/g, '/');
+};
+
 const request = async (url, { method = 'GET', headers = {} } = {}) => {
   try {
-    console.log(`[INFO] 开始请求 ${desensitize(url)}`);
     const response = await fetch(url, {
       method,
       headers: {
@@ -23,12 +27,13 @@ const request = async (url, { method = 'GET', headers = {} } = {}) => {
         ...headers,
       },
     });
+    const { status, ok } = response;
     const body = await response.text();
 
-    return body;
+    return { ok, status, body };
   } catch (e) {
     console.error(`[ERROR] 请求网络资源失败: ${desensitize(url)} - ${e.message}`);
-    return '';
+    return { ok: false, status: 0, body: '' };
   }
 };
 
@@ -51,17 +56,10 @@ const downloadFile = async (url, filePath) => {
   }
 };
 
-const replaceUrlOrigin = (url, origin) => {
-  const uri = new URL(url);
-
-  // 替换除协议头紧跟的双斜杠之外的所有双斜杠
-  return url.replace(uri.origin, origin).replace(/(?<!\:)\/\//g, '/');
-};
-
 export default {
   desensitize,
+  normalizeUrl,
   mkdirSync,
   request,
   downloadFile,
-  replaceUrlOrigin,
 };
