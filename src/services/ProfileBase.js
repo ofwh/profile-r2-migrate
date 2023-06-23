@@ -76,7 +76,7 @@ export default class ProfileBase {
       } else {
         if (folder === this.profileDir || recursive) {
           // 只对配置文件，或者明确标记需要递归时，才对内容进行分析处理
-          assets = await this.filterAssets(body);
+          assets = await this.filterAssets(body, url);
         }
 
         // 循环下载并处理资源列表
