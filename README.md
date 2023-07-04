@@ -15,6 +15,8 @@
 | `CF_ACCESS_KEY` | 参考 [Generate an S3 Auth token](https://developers.cloudflare.com/r2/data-access/s3-api/tokens/) (下同)<br>**[可选]** 用于访问 Cloudflare R2 的 Access Key ID |
 | `CF_SECRET_KEY` | **[可选]** 用于访问 Cloudflare R2 的 Secret ID |
 | `R2_BUCKET` | **[可选]** Cloudflare R2 的 **存储桶名称** |
+| `TC_SECRET_ID` | 腾讯云的Secret ID |
+| `TC_SECRET_KEY` | 腾讯云的Secret Key |
 
 3, 访问 [Actions secrets and variables](../../settings/variables/actions/new)，添加以下变量
 
@@ -22,4 +24,7 @@
 | ----- | ----- |
 | `CLASH` | 填写 Clash 配置完整链接地址，一行一个 |
 | `QUANTUMULT` | 填写 QUANTUMULT 配置完整链接地址，一行一个 |
-| `ORIGIN` | 填写新的链接域名地址，如 `https://demo.example.com` |
+| `CF_URL_PREFIX` | 填写新的链接域名地址，如 `https://demo.example.com` , 也可以带目录 `https://demo.example.com/folder` |
+| `TC_URL_PREFIX` | 填写新的链接域名地址，如 `https://demo.example.com` , 也可以带目录 `https://demo.example.com/folder` |
+| `TC_COS_BUCKET` | 腾讯云的存储桶名称，如 `bucket-12534567` |
+| `TC_COS_REGION` | 腾讯云的存储桶地域，如 `ap-guangzhou` |

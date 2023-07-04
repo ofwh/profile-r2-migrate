@@ -3,25 +3,25 @@ import QuantumultProfile from '../services/QuantumultProfile.js';
 export default class QuantumultController {
   urls = [];
   dir = '';
-  origin = '';
+  urlPrefix = '';
 
   constructor(options = {}) {
-    const { urls = [], dir = '', origin = '', match = /.*/, extensions = [] } = options;
+    const { urls = [], dir = '', urlPrefix = '', match = /.*/, extensions = [] } = options;
 
     this.urls = urls;
     this.dir = dir;
-    this.origin = origin;
+    this.urlPrefix = urlPrefix;
     this.match = match;
     this.extensions = extensions;
   }
 
   async start() {
-    const { urls, dir, origin, match, extensions } = this;
+    const { urls, dir, urlPrefix, match, extensions } = this;
 
     console.log(`[INFO] 开始处理 Quantumult 配置...`);
 
     for (const url of urls) {
-      const profile = new QuantumultProfile({ url, dir, origin, match, extensions });
+      const profile = new QuantumultProfile({ url, dir, urlPrefix, match, extensions });
 
       await profile.run();
     }

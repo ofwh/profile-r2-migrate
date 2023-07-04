@@ -11,7 +11,7 @@ const readFileSync = (filePath) => {
   return urls;
 };
 
-const { UPLOAD_DIR = '', ORIGIN = '' } = process.env;
+const { UPLOAD_DIR = '', URL_PREFIX = '' } = process.env;
 const clashUrls = readFileSync('./configs/CLASH');
 const qxUrls = readFileSync('./configs/QUANTUMULT');
 
@@ -25,5 +25,5 @@ export default {
     extensions: ['.conf', '.js', '.list', '.snippet', '.qxrewrite', '.json', '.png', '.jpg'],
   },
   dir: UPLOAD_DIR,
-  origin: ORIGIN,
+  urlPrefix: URL_PREFIX,
 };

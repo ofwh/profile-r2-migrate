@@ -1,4 +1,4 @@
-name: Profile Migrate
+name: TencentCloud
 
 on:
   workflow_dispatch:
@@ -32,20 +32,23 @@ jobs:
           npm install
           mkdir -p ./configs
           echo "UPLOAD_DIR=${{ env.UPLOAD_DIR }}" > .env
-          echo "ORIGIN=${{ vars.ORIGIN }}" >> .env
+          echo "URL_PREFIX=${{ vars.TC_URL_PREFIX }}" >> .env
           echo "${{ vars.CLASH }}" > ./configs/CLASH
           echo "${{ vars.QUANTUMULT }}" > ./configs/QUANTUMULT
           node index.js
 
-      - name: Upload files to R2 bucket
-        uses: willfurstenau/r2-dir-upload@main
+      - name: Upload files to Tencent COS and refresh CDN
+        uses: sylingd/tencent-cos-and-cdn-action@v1.0.2
         with:
-          accountid: ${{ secrets.CF_ACCOUNT_ID }}
-          accesskeyid: ${{ secrets.CF_ACCESS_KEY }}
-          secretaccesskey: ${{ secrets.CF_SECRET_KEY }}
-          bucket: ${{ secrets.R2_BUCKET }}
-          source: ${{ github.workspace }}/${{ env.UPLOAD_DIR }}
-          destination: /
+          secret_id: ${{ secrets.TC_SECRET_ID }}
+          secret_key: ${{ secrets.TC_SECRET_KEY }}
+          cos_bucket: ${{ vars.TC_COS_BUCKET }}
+          cos_region: ${{ vars.TC_COS_REGION }}
+          cos_accelerate: false
+          cdn_prefix: ${{ vars.TC_URL_PREFIX }}
+          local_path: ${{ env.UPLOAD_DIR }}
+          remote_path: /
+          clean: false
 
       - name: Push to "${{ env.PUSH_BRANCH }}" branch
         run: |

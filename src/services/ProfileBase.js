@@ -5,7 +5,7 @@ import utils from '../utils/index.js';
 
 export default class ProfileBase {
   url = '';
-  origin = '';
+  urlPrefix = '';
   rootDir = '';
   rootPath = '';
 
@@ -16,10 +16,10 @@ export default class ProfileBase {
   urls = {}; // 已加载的资源文件信息
 
   constructor(options = {}) {
-    const { dir = '', url = '', origin = '' } = options;
+    const { dir = '', url = '', urlPrefix = '' } = options;
 
     this.url = url;
-    this.origin = origin;
+    this.urlPrefix = urlPrefix;
     this.rootDir = dir;
     this.rootPath = path.join(process.cwd(), `./${dir}`);
   }
@@ -58,7 +58,7 @@ export default class ProfileBase {
 
     if (ok) {
       // 文件下载成功
-      const { origin, rootPath, assetsDir, recursive, urls } = this;
+      const { urlPrefix, rootPath, assetsDir, recursive, urls } = this;
       const uri = new URL(url);
       const pathname = `/${folder || assetsDir}/${uri.pathname}`;
 
@@ -104,7 +104,7 @@ export default class ProfileBase {
 
       const info = {
         url,
-        newUrl: utils.normalizeUrl(`${origin}/${pathname}`),
+        newUrl: utils.normalizeUrl(`${urlPrefix}/${pathname}`),
         handled: true,
         assets,
       };

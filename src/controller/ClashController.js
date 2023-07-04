@@ -3,23 +3,23 @@ import ClashProfile from '../services/ClashProfile.js';
 export default class ClashController {
   urls = [];
   dir = '';
-  origin = '';
+  urlPrefix = '';
 
   constructor(options = {}) {
-    const { urls = [], dir = '', origin = '' } = options;
+    const { urls = [], dir = '', urlPrefix = '' } = options;
 
     this.urls = urls;
     this.dir = dir;
-    this.origin = origin;
+    this.urlPrefix = urlPrefix;
   }
 
   async start() {
-    const { urls, dir, origin } = this;
+    const { urls, dir, urlPrefix } = this;
 
     console.log(`[INFO] 开始处理 Clash 配置...`);
 
     for (const url of urls) {
-      const profile = new ClashProfile({ url, dir, origin });
+      const profile = new ClashProfile({ url, dir, urlPrefix });
 
       await profile.run();
     }
