@@ -3,7 +3,7 @@ name: CloudFlare
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 3 * * *
+    - cron: 0 16 * * *
 
 env:
   UPLOAD_DIR: 'uploads'
