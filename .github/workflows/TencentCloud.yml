@@ -7,7 +7,7 @@ on:
 
 env:
   UPLOAD_DIR: 'uploads'
-  PUSH_BRANCH: 'release'
+  PUSH_BRANCH: 'release/tencentcloud'
   NODE_VERSION: '18'
 
 jobs:
