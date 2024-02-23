@@ -1,0 +1,5 @@
+# SSH
+DST-PORT,26538
+
+# 不在代理名单，但是要走代理的
+DOMAIN-SUFFIX,bofoi.com
