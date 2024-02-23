@@ -34,7 +34,7 @@ jobs:
           echo "UPLOAD_DIR=${{ env.UPLOAD_DIR }}" > .env
           echo "URL_PREFIX=${{ vars.TC_URL_PREFIX }}" >> .env
           echo "${{ vars.CLASH }}" > ./configs/CLASH
-          echo "${{ vars.QUANTUMULT }}" > ./configs/QUANTUMULT
+          echo "${{ vars.QUANTUMULTX }}" > ./configs/QUANTUMULTX
           node index.js
 
       - name: Upload files to Tencent COS and refresh CDN
@@ -50,14 +50,26 @@ jobs:
           remote_path: /
           clean: false
 
-      - name: Push to "${{ env.PUSH_BRANCH }}" branch
+      # - name: Push to "${{ env.PUSH_BRANCH }}" branch
+      #   run: |
+      #     cd ${{ env.UPLOAD_DIR }}
+      #     git init
+      #     git config user.name "${{ github.actor }}"
+      #     git config user.email "${{ github.actor }}@users.noreply.github.com"
+      #     git checkout -b ${{ env.PUSH_BRANCH }}
+      #     git add .
+      #     git commit -m "commit ${{ env.TAG_NAME }}"
+      #     git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+      #     git push -f origin ${{ env.PUSH_BRANCH }}
+
+      - name: Push changes to "${{ env.PUSH_BRANCH }}" branch
         run: |
-          cd ${{ env.UPLOAD_DIR }}
-          git init
+          git clone -b ${{ env.PUSH_BRANCH }} "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" release_branch
+          cd release_branch
+          git rm -rf .
+          cp -rv ../${{ env.UPLOAD_DIR }}/* .
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
-          git checkout -b ${{ env.PUSH_BRANCH }}
-          git add .
+          git add -A .
           git commit -m "commit ${{ env.TAG_NAME }}"
-          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f origin ${{ env.PUSH_BRANCH }}
