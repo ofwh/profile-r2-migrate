@@ -6,14 +6,15 @@ dotenv.config();
 // 从文件中读取并解析配置地址
 const readFileSync = (filePath) => {
   const content = fs.readFileSync(filePath, 'utf-8');
-  const urls = content.split('\n').filter((_) => _.replace(/\s+/g, ''));
+  // 支持换行，英文逗号，英文竖线分割多个链接地址
+  const urls = content.split(/\n|,|\|/).filter((_) => _.replace(/\s+/g, ''));
 
   return urls;
 };
 
 const { UPLOAD_DIR = '', URL_PREFIX = '' } = process.env;
 const clashUrls = readFileSync('./configs/CLASH');
-const qxUrls = readFileSync('./configs/QUANTUMULT');
+const qxUrls = readFileSync('./configs/QUANTUMULTX');
 
 export default {
   clash: { urls: clashUrls },

@@ -18,7 +18,7 @@ export default class QuantumultController {
   async start() {
     const { urls, dir, urlPrefix, match, extensions } = this;
 
-    console.log(`[INFO] 开始处理 Quantumult 配置...`);
+    console.log(`[INFO] 开始处理 Quantumult X 配置...`);
 
     for (const url of urls) {
       const profile = new QuantumultProfile({ url, dir, urlPrefix, match, extensions });
@@ -26,6 +26,6 @@ export default class QuantumultController {
       await profile.run();
     }
 
-    console.log(`[INFO] Quantumult 配置处理完成，详情请查看处理日志`);
+    console.log(`[INFO] Quantumult X 配置处理完成，详情请查看处理日志`);
   }
 }

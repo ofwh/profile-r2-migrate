@@ -23,7 +23,7 @@
 | Name字段 | Value字段 |
 | ----- | ----- |
 | `CLASH` | 填写 Clash 配置完整链接地址，一行一个 |
-| `QUANTUMULT` | 填写 QUANTUMULT 配置完整链接地址，一行一个 |
+| `QUANTUMULTX` | 填写 QUANTUMULTX 配置完整链接地址，一行一个 |
 | `CF_URL_PREFIX` | 填写新的链接域名地址，如 `https://demo.example.com` , 也可以带目录 `https://demo.example.com/folder` |
 | `TC_URL_PREFIX` | 填写新的链接域名地址，如 `https://demo.example.com` , 也可以带目录 `https://demo.example.com/folder` |
 | `TC_COS_BUCKET` | 腾讯云的存储桶名称，如 `bucket-12534567` |
