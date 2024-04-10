@@ -15,11 +15,18 @@ export default class ClashProfile extends ProfileBase {
 
       return config.custom.ruleset
         .map((line) => {
+          // line数据可能是如下格式
+          // 全球直连,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml
+          // 全球直连,clash-domain:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml,86400
           const [, ...args] = line.split(',');
           const link = args.join(',');
 
-          if (/^(\s+)?http(s)?:\/\//.test(link)) {
-            return { url: link };
+          if (/^(\s+)?(clash-domain:)?http(s)?:\/\//.test(link)) {
+            return {
+              url: link
+                .replace('clash-domain:', '') // 替换开头无效的数据
+                .replace(/(,\d+)$/, ''), // TODO，替换末尾的更新时间戳，暂时用这个方式处理，后续需解析内容
+            };
           }
 
           return;
