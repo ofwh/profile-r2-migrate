@@ -21,10 +21,10 @@ export default class ClashProfile extends ProfileBase {
           const [, ...args] = line.split(',');
           const link = args.join(',');
 
-          if (/^(\s+)?(clash-domain:)?http(s)?:\/\//.test(link)) {
+          if (/^(\s+)?(clash-(\w+):)?http(s)?:\/\//.test(link)) {
             return {
               url: link
-                .replace('clash-domain:', '') // 替换开头无效的数据
+                .replace(/clash-(\w+):/, '') // 替换开头无效的数据
                 .replace(/(,\d+)$/, ''), // TODO，替换末尾的更新时间戳，暂时用这个方式处理，后续需解析内容
             };
           }
