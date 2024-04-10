@@ -2,6 +2,13 @@
 # 最高优先级的代理配置 #
 #####################
 
+# SSH
+DST-PORT,26538
+
+# 不在代理名单，但是要走代理的
+DOMAIN-SUFFIX,bofoi.com
+
+
 # 一些站点可能不存在的
 DOMAIN-SUFFIX,v2ex.com
 
