@@ -2,6 +2,8 @@ name: CloudFlare
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [profile-changed]
   schedule:
     - cron: 0 16 * * *
 

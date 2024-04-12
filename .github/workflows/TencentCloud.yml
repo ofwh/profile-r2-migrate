@@ -2,6 +2,8 @@ name: TencentCloud
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [profile-changed]
   schedule:
     - cron: 0 12 * * *
 
