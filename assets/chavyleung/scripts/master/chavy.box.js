@@ -361,18 +361,18 @@ function getSystemCfgs() {
     version: $.version,
     versionType: $.versionType,
     envs: [
-      { id: 'Surge', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/surge.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/surge.png'] },
-      { id: 'QuanX', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/quanX.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/quantumultx.png'] },
-      { id: 'Loon', icons: ['https://raw.githubusercontent.com/Orz-3/mini/none/loon.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/loon.png'] },
-      { id: 'Shadowrocket', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/shadowrocket.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/shadowrocket.png'] },
-      { id: 'Stash', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/stash.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/stash.png'] }
+      { id: 'Surge', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/none/surge.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/surge.png'] },
+      { id: 'QuanX', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/none/quanX.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/quantumultx.png'] },
+      { id: 'Loon', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/none/loon.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/loon.png'] },
+      { id: 'Shadowrocket', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/master/Alpha/shadowrocket.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/shadowrocket.png'] },
+      { id: 'Stash', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/master/Alpha/stash.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/stash.png'] }
     ],
     chavy: { id: 'ChavyLeung', icon: 'https://avatars3.githubusercontent.com/u/29748519', repo: 'https://github.com/chavyleung/scripts' },
     senku: { id: 'GideonSenku', icon: 'https://avatars1.githubusercontent.com/u/39037656', repo: 'https://github.com/GideonSenku' },
     id77: { id: 'id77', icon: 'https://avatars0.githubusercontent.com/u/9592236', repo: 'https://github.com/id77' },
-    orz3: { id: 'Orz-3', icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Orz-3.png', repo: 'https://github.com/Orz-3/' },
-    boxjs: { id: 'BoxJs', show: false, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/box.png', icons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/box.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/box.png'], repo: 'https://github.com/chavyleung/scripts' },
-    defaultIcons: ['https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/appstore.png', 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/appstore.png']
+    orz3: { id: 'Orz-3', icon: 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/Orz-3.png', repo: 'https://github.com/Orz-3/' },
+    boxjs: { id: 'BoxJs', show: false, icon: 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/box.png', icons: ['https://raw.bofoi.com/assets/Orz-3/mini/master/Alpha/box.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/box.png'], repo: 'https://github.com/chavyleung/scripts' },
+    defaultIcons: ['https://raw.bofoi.com/assets/Orz-3/mini/master/Alpha/appstore.png', 'https://raw.bofoi.com/assets/Orz-3/mini/master/Color/appstore.png']
   }
 }
 
@@ -408,34 +408,34 @@ function getSystemApps() {
       scripts: [
         {
           name: "抹掉：所有缓存",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.caches.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.caches.js"
         },
         {
           name: "抹掉：收藏应用",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.favapps.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.favapps.js"
         },
         {
           name: "抹掉：用户偏好",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.js"
         },
         {
           name: "抹掉：所有会话",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.sessions.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.usercfgs.sessions.js"
         },
         {
           name: "抹掉：所有备份",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.baks.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.baks.js"
         },
         {
           name: "抹掉：BoxJs (注意备份)",
-          script: "https://raw.githubusercontent.com/chavyleung/scripts/master/box/scripts/boxjs.revert.boxjs.js"
+          script: "https://raw.bofoi.com/assets/chavyleung/scripts/master/box/scripts/boxjs.revert.boxjs.js"
         }
       ],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://raw.bofoi.com/assets/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
       icons: [
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.mini.png',
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSetting.png'
+        'https://raw.bofoi.com/assets/chavyleung/scripts/master/box/icons/BoxSetting.mini.png',
+        'https://raw.bofoi.com/assets/chavyleung/scripts/master/box/icons/BoxSetting.png'
       ]
     },
     {
@@ -445,12 +445,12 @@ function getSystemApps() {
       keys: [],
       settings: [{ id: 'CFG_BoxSwitcher_isSilent', name: '静默运行', val: false, type: 'boolean', desc: '切换会话时不发出系统通知!' }],
       author: '@chavyleung',
-      repo: 'https://github.com/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
+      repo: 'https://raw.bofoi.com/assets/chavyleung/scripts/blob/master/box/switcher/box.switcher.js',
       icons: [
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.mini.png',
-        'https://raw.githubusercontent.com/chavyleung/scripts/master/box/icons/BoxSwitcher.png'
+        'https://raw.bofoi.com/assets/chavyleung/scripts/master/box/icons/BoxSwitcher.mini.png',
+        'https://raw.bofoi.com/assets/chavyleung/scripts/master/box/icons/BoxSwitcher.png'
       ],
-      script: 'https://raw.githubusercontent.com/chavyleung/scripts/master/box/switcher/box.switcher.js'
+      script: 'https://raw.bofoi.com/assets/chavyleung/scripts/master/box/switcher/box.switcher.js'
     },
     {
       "id": "BoxGist",
@@ -464,8 +464,8 @@ function getSystemApps() {
       ],
       "author": "@dompling",
       "icons": [
-        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
-        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
+        "https://raw.bofoi.com/assets/Former-Years/icon/master/github-bf.png",
+        "https://raw.bofoi.com/assets/Former-Years/icon/master/github-bf.png"
       ],
       "descs_html": [
         "<h2>Token的获取方式</h2>",
@@ -485,15 +485,15 @@ function getSystemApps() {
       "scripts": [
         {
           "name": "备份 Gist",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js"
+          "script": "https://raw.bofoi.com/assets/dompling/Script/master/gist/backup.js"
         },
         {
           "name": "从 Gist 恢复",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js"
+          "script": "https://raw.bofoi.com/assets/dompling/Script/master/gist/restore.js"
         },
         {
           "name": "更新历史版本",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/commit.js"
+          "script": "https://raw.bofoi.com/assets/dompling/Script/master/gist/commit.js"
         }
       ],
       "settings": [

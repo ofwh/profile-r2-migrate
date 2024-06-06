@@ -276,182 +276,182 @@
         "format": "binary",
         "tag": "geosite-category-ads-all",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ads-all.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-apple",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/apple.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-microsoft",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-google",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/google.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-google",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-twitter",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/twitter.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-twitter",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/twitter.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/twitter.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-facebook",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/facebook.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-facebook",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/facebook.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-openai",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/openai.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-anthropic",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/anthropic.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/anthropic.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-telegram",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/telegram.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-telegram",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-youtube",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-netflix",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/netflix.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-netflix",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-bahamut",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/bahamut.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/bahamut.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-tiktok",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/tiktok.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-disney",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/disney.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-hbo",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/hbo.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-primevideo",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/primevideo.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-category-games",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-games.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-cn",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-cn",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geosite-private",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs"
       },
       {
         "download_detour": "Proxy",
         "format": "binary",
         "tag": "geoip-private",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs"
+        "url": "https://raw.bofoi.com/assets/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs"
       }
     ],
     "rules": [
