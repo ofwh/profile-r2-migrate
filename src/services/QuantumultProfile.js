@@ -5,7 +5,7 @@ import ProfileBase from './ProfileBase.js';
 // 要求以http或者https开头的协议
 // 链接中过滤一些常见的非链接字符串（如一些配置中的正则表达式和一些js代码中的字符串关键字符）
 // 要求有结尾扩展名（不严格，会命中域名后缀），且链接紧跟着 “空格+逗号” 或者 “行尾”
-const regUrl = /http(s)?:\/\/([^,\s\$#*'"`\{\}\[\]\(\)\\]*)\.(\w+)(?=((\s*,)|$))/gm;
+const regUrl = /http(s)?:\/\/([^,\s\$#*'"`\{\}\[\]\(\)\\]*)\.(\w+)(?=((\s*,)|'|"|$))/gm;
 
 export default class QuantumultProfile extends ProfileBase {
   recursive = true;

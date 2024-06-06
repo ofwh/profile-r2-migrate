@@ -23,7 +23,20 @@ export default {
     // 通过域名模糊匹配链接地址，包含的则进行资源迁移
     match: /github\.com|github\.githubassets\.com|raw\.githubusercontent\.com|myqcloud\.com/,
     // 匹配后缀，不要给像html,md等页面类型的后缀，否则可能会因为有一些其他页面链接地址，导致死循环
-    extensions: ['.conf', '.js', '.list', '.yaml', '.yml', '.toml', '.snippet', '.qxrewrite', '.json', '.png', '.jpg'],
+    extensions: [
+      '.conf',
+      '.js',
+      '.list',
+      '.yaml',
+      '.yml',
+      '.toml',
+      '.snippet',
+      '.qxrewrite',
+      '.json',
+      '.png',
+      '.jpg',
+      '.srs',
+    ],
   },
   dir: UPLOAD_DIR,
   urlPrefix: URL_PREFIX,
