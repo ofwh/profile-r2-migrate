@@ -16,14 +16,18 @@ export default class ProfileBase {
 
   urls = {}; // 已加载的资源文件信息
 
+  // 请求头信息
+  headers = {};
+
   constructor(options = {}) {
-    const { dir = '', url = '', urlPrefix = '', download = false } = options;
+    const { dir = '', url = '', urlPrefix = '', download = false, headers = {} } = options;
 
     this.url = url;
     this.urlPrefix = urlPrefix;
     this.rootDir = dir;
     this.rootPath = path.join(process.cwd(), `./${dir}`);
     this.download = download;
+    this.headers = Object.assign(this.headers, headers);
   }
 
   /**
@@ -56,7 +60,10 @@ export default class ProfileBase {
       return cache;
     }
 
-    let { ok, status, body } = await utils.request(url, { download: this.download });
+    let { ok, status, body } = await utils.request(url, {
+      download: this.download,
+      headers: this.headers,
+    });
 
     if (ok) {
       // 文件下载成功
@@ -73,7 +80,7 @@ export default class ProfileBase {
       utils.mkdirSync(filePath);
 
       if (body instanceof Buffer) {
-        // 图片文件
+        // 原始文件，无需处理，直接写入文件
         fs.writeFileSync(file, body);
       } else {
         if (folder === this.profileDir || recursive) {
