@@ -37,6 +37,7 @@ jobs:
           echo "URL_PREFIX=${{ vars.TC_URL_PREFIX }}" >> .env
           echo "${{ vars.CLASH }}" > ./configs/CLASH
           echo "${{ vars.QUANTUMULTX }}" > ./configs/QUANTUMULTX
+          echo "${{ vars.LOON }}" > ./configs/LOON
           echo "${{ vars.URLS }}" > ./configs/URLS
           node index.js
 
