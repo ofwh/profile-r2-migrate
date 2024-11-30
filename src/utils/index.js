@@ -6,6 +6,8 @@ import configs from '../config.js';
 const desensitize = (link) => {
   const uri = new URL(link);
 
+  if (process.env.NODE_ENV === 'development') return link;
+
   return link.replace(uri.host, '***');
 };
 
