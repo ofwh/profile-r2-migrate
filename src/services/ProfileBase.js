@@ -12,16 +12,18 @@ export default class ProfileBase {
   profileDir = 'profiles'; // 配置文件保存的目录
   assetsDir = 'assets'; // 关联资源保存的目录
   recursive = false; // 是否递归处理配置（即出了处理配置文件，同时递归处理关联的资源文件）
+  download = false; // 是否下载原始资源（例如图片，音频，视频等）
 
   urls = {}; // 已加载的资源文件信息
 
   constructor(options = {}) {
-    const { dir = '', url = '', urlPrefix = '' } = options;
+    const { dir = '', url = '', urlPrefix = '', download = false } = options;
 
     this.url = url;
     this.urlPrefix = urlPrefix;
     this.rootDir = dir;
     this.rootPath = path.join(process.cwd(), `./${dir}`);
+    this.download = download;
   }
 
   /**
@@ -54,7 +56,7 @@ export default class ProfileBase {
       return cache;
     }
 
-    let { ok, status, body } = await utils.request(url);
+    let { ok, status, body } = await utils.request(url, { download: this.download });
 
     if (ok) {
       // 文件下载成功

@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import configs from '../config.js';
+
 const desensitize = (link) => {
   const uri = new URL(link);
 
@@ -16,7 +18,7 @@ const normalizeUrl = (url) => {
   return url.replace(/(?<!:)\/+/g, '/');
 };
 
-const request = async (url, { method = 'GET', headers = {} } = {}) => {
+const request = async (url, { method = 'GET', headers = {}, download = false } = {}) => {
   try {
     const response = await fetch(url, {
       method,
@@ -28,10 +30,10 @@ const request = async (url, { method = 'GET', headers = {} } = {}) => {
     });
     const { status, ok } = response;
 
-    const isPicture = ['.png', '.jpg', '.jpeg', '.bmp'].some((ext) => url.endsWith(ext));
+    const isRaw = configs.format.raw.some((ext) => url.endsWith(ext));
     let body;
 
-    if (isPicture) {
+    if (isRaw || download) {
       const blob = await response.blob();
       const arrayBuffer = await blob.arrayBuffer();
 
