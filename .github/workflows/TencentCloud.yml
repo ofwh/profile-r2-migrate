@@ -8,9 +8,9 @@ on:
     - cron: 0 12 * * *
 
 env:
-  UPLOAD_DIR: 'uploads'
-  PUSH_BRANCH: 'release/tencentcloud'
-  NODE_VERSION: '20'
+  UPLOAD_DIR: "uploads"
+  PUSH_BRANCH: "release/tencentcloud"
+  NODE_VERSION: "20"
 
 jobs:
   deploy:
@@ -37,6 +37,7 @@ jobs:
           echo "URL_PREFIX=${{ vars.TC_URL_PREFIX }}" >> .env
           echo "${{ vars.CLASH }}" > ./configs/CLASH
           echo "${{ vars.QUANTUMULTX }}" > ./configs/QUANTUMULTX
+          echo "${{ vars.URLS }}" > ./configs/URLS
           node index.js
 
       - name: Upload files to Tencent COS and refresh CDN
