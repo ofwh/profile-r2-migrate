@@ -1,4 +1,4 @@
-# Update at 2024-12-08 06:43:06
+# Update at 2024-12-09 06:45:56
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.0.1.0/24 list=CN
