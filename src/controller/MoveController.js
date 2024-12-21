@@ -15,7 +15,7 @@ export default class MoveController {
   async start() {
     const { urls, dir, urlPrefix } = this;
 
-    console.log(`[INFO] 开始处理 Clash 配置...`);
+    console.log(`[INFO] 开始处理 HTTP 文件搬迁配置...`);
 
     for (const url of urls) {
       const profile = new MoveProfile({ url, dir, urlPrefix });
@@ -23,6 +23,6 @@ export default class MoveController {
       await profile.run();
     }
 
-    console.log(`[INFO] Clash 配置处理完成，详情请查看处理日志`);
+    console.log(`[INFO] HTTP 文件搬迁配置处理完成，详情请查看处理日志`);
   }
 }
