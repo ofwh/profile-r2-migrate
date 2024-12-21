@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "raw.githubusercontent.com",
+        "login.live.com",
+        "kr.bofoi.com",
+        "aliyun.com",
+        "alibabacloud.com",
+        "aiproxy.io"
+      ]
+    }
+  ]
+}
