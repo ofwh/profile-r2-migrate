@@ -8,9 +8,9 @@ on:
     - cron: 0 12 * * *
 
 env:
-  UPLOAD_DIR: "uploads"
-  PUSH_BRANCH: "release/tencentcloud"
-  NODE_VERSION: "20"
+  UPLOAD_DIR: 'uploads'
+  PUSH_BRANCH: 'release/tencentcloud'
+  NODE_VERSION: '20'
 
 jobs:
   deploy:
@@ -41,18 +41,18 @@ jobs:
           echo "${{ vars.URLS }}" > ./configs/URLS
           node index.js
 
-      - name: Upload files to Tencent COS and refresh CDN
-        uses: sylingd/tencent-cos-and-cdn-action@v1.0.2
-        with:
-          secret_id: ${{ secrets.TC_SECRET_ID }}
-          secret_key: ${{ secrets.TC_SECRET_KEY }}
-          cos_bucket: ${{ vars.TC_COS_BUCKET }}
-          cos_region: ${{ vars.TC_COS_REGION }}
-          cos_accelerate: false
-          cdn_prefix: ${{ vars.TC_URL_PREFIX }}
-          local_path: ${{ env.UPLOAD_DIR }}
-          remote_path: /
-          clean: false
+      # - name: Upload files to Tencent COS and refresh CDN
+      #   uses: sylingd/tencent-cos-and-cdn-action@v1.0.2
+      #   with:
+      #     secret_id: ${{ secrets.TC_SECRET_ID }}
+      #     secret_key: ${{ secrets.TC_SECRET_KEY }}
+      #     cos_bucket: ${{ vars.TC_COS_BUCKET }}
+      #     cos_region: ${{ vars.TC_COS_REGION }}
+      #     cos_accelerate: false
+      #     cdn_prefix: ${{ vars.TC_URL_PREFIX }}
+      #     local_path: ${{ env.UPLOAD_DIR }}
+      #     remote_path: /
+      #     clean: false
 
       # - name: Push to "${{ env.PUSH_BRANCH }}" branch
       #   run: |
