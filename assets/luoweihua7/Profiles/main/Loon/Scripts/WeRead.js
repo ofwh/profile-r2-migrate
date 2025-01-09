@@ -28,6 +28,7 @@ if (method === 'POST' && url.includes('mobileSync') && body.includes('upgrade'))
 
   const rewrote = JSON.stringify(bodyJSON);
   $done({ body: rewrote });
+  console.log(bodyJSON)
 } else {
   $done({});
 }
