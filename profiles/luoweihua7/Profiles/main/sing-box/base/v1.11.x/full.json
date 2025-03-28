@@ -21,7 +21,7 @@
     "servers": [
       {
         "address": "https://1.1.1.1/dns-query",
-        "detour": "direct",
+        "detour": "代理访问",
         "tag": "remote-dns"
       },
       {
