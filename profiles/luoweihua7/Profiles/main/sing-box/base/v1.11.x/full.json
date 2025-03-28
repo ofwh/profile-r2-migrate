@@ -187,23 +187,6 @@
     },
     {
       "type": "selector",
-      "tag": "BiliBili服务",
-      "outbounds": [
-        "tag://direct",
-        "tag://代理访问",
-        "include://(实验)",
-        "include://(高级)",
-        "include://(标准)",
-        "include://(港)",
-        "include://(美)",
-        "include://(日)",
-        "include://(新)",
-        "include://(.*)"
-      ],
-      "interrupt_exist_connections": true
-    },
-    {
-      "type": "selector",
       "tag": "Netflix服务",
       "outbounds": [
         "tag://代理访问",
@@ -556,12 +539,6 @@
         "rule_set": [
           "geosite-microsoft",
           "geosite-onedrive"
-        ]
-      },
-      {
-        "outbound": "BiliBili服务",
-        "rule_set": [
-          "geosite-bilibili"
         ]
       },
       {
