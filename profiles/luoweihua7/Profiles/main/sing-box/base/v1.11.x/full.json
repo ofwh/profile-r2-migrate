@@ -14,7 +14,7 @@
       "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "external_ui_download_detour": "代理访问",
-      "external_ui_download_url": "https://raw.bofoi.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip"
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
     }
   },
   "dns": {
