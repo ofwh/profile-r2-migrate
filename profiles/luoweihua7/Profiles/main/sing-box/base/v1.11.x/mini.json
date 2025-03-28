@@ -63,14 +63,21 @@
   },
   "inbounds": [
     {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "::",
+      "listen_port": 53,
+      "network": "udp"
+    },
+    {
       "type": "mixed",
       "tag": "mixed-in",
       "listen": "::",
       "listen_port": 7890
     },
     {
-      "tag": "tun-in",
       "type": "tun",
+      "tag": "tun-in",
       "address": [
         "172.19.0.0/30"
       ],
