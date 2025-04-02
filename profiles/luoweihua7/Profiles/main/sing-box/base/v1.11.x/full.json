@@ -571,6 +571,7 @@
       {
         "outbound": "direct",
         "rule_set": [
+          "personal-direct",
           "geosite-cn",
           "geoip-cn"
         ]

@@ -419,6 +419,7 @@
       {
         "outbound": "direct",
         "rule_set": [
+          "personal-direct",
           "geosite-apple",
           "geosite-bilibili",
           "geosite-onedrive",
