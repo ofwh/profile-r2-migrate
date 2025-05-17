@@ -265,7 +265,7 @@
         "tag": "personal-ad-block",
         "type": "remote",
         "update_interval": "1d",
-        "url": "https://raw.githubusercontent.com/luoweihua7/Profiles/refs/heads/main/sing-box/Rules/ADBlock.json"
+        "url": "https://cdn.podkit.cn/assets/luoweihua7/Profiles/refs/heads/main/sing-box/Rules/ADBlock.json"
       },
       {
         "download_detour": "代理访问",
