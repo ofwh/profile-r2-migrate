@@ -290,7 +290,7 @@
         "tag": "personal-specify-proxy",
         "type": "remote",
         "update_interval": "1d",
-        "url": "https://raw.githubusercontent.com/luoweihua7/Profiles/refs/heads/main/sing-box/Rules/SpecifyProxy.json"
+        "url": "https://cdn.podkit.cn/assets/luoweihua7/Profiles/refs/heads/main/sing-box/Rules/SpecifyProxy.json"
       },
       {
         "download_detour": "代理访问",
