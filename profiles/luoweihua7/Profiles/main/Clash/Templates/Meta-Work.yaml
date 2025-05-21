@@ -21,16 +21,15 @@ dns:
     - system
   nameserver-policy:
     'geosite:cn,private,apple':
-      - 114.114.114.114
       - 119.29.29.29
       - 223.5.5.5
+      - 114.114.114.114
     'geosite:category-ads-all': rcode://success
     '+.fenqile.cn,+.fenqile.com': [10.1.52.202, 10.1.52.203]
   nameserver:
-    - 114.114.114.114
     - 119.29.29.29
     - 223.5.5.5
-    - tls://223.5.5.5:853
+    - 114.114.114.114
 sniffer:
   enable: true
   sniff:
