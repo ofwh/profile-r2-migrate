@@ -320,14 +320,14 @@
         "format": "source",
         "tag": "personal-proxy",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/ofwh/Profiles/refs/heads/main/sing-box/Rules/Proxy.json"
+        "url": "https://cdn.podkit.cn/assets/ofwh/Profiles/refs/heads/main/sing-box/Rules/Proxy.json"
       },
       {
         "download_detour": "代理访问",
         "format": "source",
         "tag": "personal-specify-proxy",
         "type": "remote",
-        "url": "https://raw.githubusercontent.com/ofwh/Profiles/refs/heads/main/sing-box/Rules/SpecifyProxy.json"
+        "url": "https://cdn.podkit.cn/assets/ofwh/Profiles/refs/heads/main/sing-box/Rules/SpecifyProxy.json"
       },
       {
         "download_detour": "代理访问",
