@@ -276,8 +276,8 @@
         "include://(香港)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
@@ -287,8 +287,8 @@
         "include://(日本)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
@@ -298,8 +298,8 @@
         "include://(新加坡)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
@@ -309,8 +309,8 @@
         "include://(台湾)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
@@ -320,8 +320,8 @@
         "include://(美国)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
@@ -331,8 +331,8 @@
         "include://(^(?!.*[美日新台港]).+)"
       ],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "1m",
-      "tolerance": 50,
+      "interval": "3m",
+      "tolerance": 70,
       "interrupt_exist_connections": false
     },
     {
