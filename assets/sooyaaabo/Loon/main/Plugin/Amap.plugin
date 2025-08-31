@@ -1,17 +1,18 @@
 #!name = 高德地图
 #!desc = 过滤高德地图广告
 #!openUrl = https://apps.apple.com/app/id461703208
-#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh], kelv1n1n[https://github.com/kelv1n1n], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
-#!date = 2025-08-29 18:00
+#!date = 2025-08-31 09:00
 
-# 2025-08-24 16:05:54
-# https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
+# 2025-08-31 07:30:19
+# https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx 
+# https://klraw.pages.dev/kelv1n1n/script/main/plugin/amap.plugin?token=209863
 
 [Rule]
 # 移除广告下发请求
@@ -44,7 +45,7 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
-^https:\/\/ai\.amap\.com\/v1\/ai_rec\/ reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? reject-dict
 
 # 打车页 - 红点角标、弹窗、天气图标、推广卡片
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) reject-dict
