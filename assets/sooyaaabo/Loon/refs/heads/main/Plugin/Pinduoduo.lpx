@@ -8,9 +8,9 @@
 #!loon_version = 3.3.3(894)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-09-09 22:00
+#!date = 2025-09-12 19:00
 
-# 2025-08-02
+# 2025-09-12
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024-08-10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
@@ -44,22 +44,28 @@ IP-CIDR, 117.185.242.187/32, REJECT
 IP-CIDR, 117.185.242.18/32, REJECT
 IP-CIDR, 183.194.214.14/32, REJECT
 IP-CIDR, 114.110.96.1/32, REJECT
+IP-CIDR, 36.152.46.15/32, REJECT
+IP-CIDR, 114.110.97.30/32, REJECT
+IP-CIDR, 81.69.130.131/32, REJECT
+IP-CIDR, 114.110.96.26/32, REJECT
+IP-CIDR, 101.35.212.35/32, REJECT
+IP-CIDR, 91.108.56.107/32, REJECT
 
 [Rewrite]
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element reject-dict
-^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|my_order_group|new_chat_group|order_express_group|personal) reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element REJECT-dict
+^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|my_order_group|new_chat_group|order_express_group|personal) REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append REJECT-dict
+^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? REJECT-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
 ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items
-^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data REJECT-dict
 ^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
-^https:\/\/api\.pinduoduo\.com\/search_hotquery\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/search_hotquery\? REJECT-dict
 
 # 搜索词推荐、横幅模块
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.search_bar_hot_query result.dy_module.irregular_banner_dy
