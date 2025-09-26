@@ -8,7 +8,7 @@
 #!loon_version = 3.3.4(898)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-09-19 23:00
+#!date = 2025-09-26 23:00
 
 # 2025-09-19
 # https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
@@ -17,10 +17,13 @@
 # DiDaChuXing
 DOMAIN-SUFFIX, shenshiads.com, REJECT
 
+# LeXiaoTong
+DOMAIN-SUFFIX, yfanads.com, REJECT
+
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.09.19/c396/v2.0.619 reject-200
+^https?:\/\/2025.09.19/c397/v2.0.619 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
