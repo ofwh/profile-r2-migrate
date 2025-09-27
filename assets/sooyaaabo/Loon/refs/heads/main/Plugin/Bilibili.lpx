@@ -8,16 +8,16 @@
 #!loon_version = 3.3.4(898)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-09-18 12:00
+#!date = 2025-09-27 09:00
 
-# 2025-09-14 01:10:22
+# 2025-09-27 01:20:12
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 # 2025-08-02
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.lpx
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/bilibili.sgmodule
 
 [Argument]
-showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
+showUpList = select, "auto", "show", "hide", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; show: 始终显示; hide: 始终隐藏;
 purifyTopReplies = switch, true, false, tag = [评论区]过滤置顶评论广告, desc = true: 开启; false: 关闭;
 purifyWebpage = switch, true, false, tag = [直播间]净化内嵌网页广告, desc = true: 开启; false: 关闭;
 airborne = switch, true, false, tag = [空降助手]跳过视频内插播广告, desc = true: 开启; false: 关闭;
