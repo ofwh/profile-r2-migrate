@@ -32,13 +32,15 @@ DOMAIN-SUFFIX, guzzoni.apple.com
 DOMAIN-SUFFIX, smoot.apple.com
 DOMAIN-SUFFIX, apps.mzstatic.com
 
-
 # GitHub Copilot
 DOMAIN, api.githubcopilot.com
 DOMAIN, copilot-proxy.githubusercontent.com
 DOMAIN, copilot.microsoft.com
 DOMAIN, sydney.bing.com
 DOMAIN-SUFFIX, githubcopilot.com
+
+# Google Antigravity
+DOMAIN, antigravity.google
 
 # Google Gemini
 DOMAIN, ai.google.dev
