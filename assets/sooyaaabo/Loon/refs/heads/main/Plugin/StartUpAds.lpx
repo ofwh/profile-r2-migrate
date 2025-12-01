@@ -8,9 +8,9 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-11-29 21:00
+#!date = 2025-12-01 21:00
 
-# 2025-11-29
+# 2025-12-01
 # https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
 
 [Rule]
@@ -26,7 +26,7 @@ DOMAIN-SUFFIX, msmp.abchina.com.cn, REJECT
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.11.29/c402/v2.0.628 reject-200
+^https?:\/\/2025.12.01/c402/v2.0.629 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
