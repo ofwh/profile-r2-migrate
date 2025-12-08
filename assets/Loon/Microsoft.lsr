@@ -1,5 +1,5 @@
-# UpdateTime：2025-12-06 03:05:55
-# RuleCount：710
+# UpdateTime：2025-12-08 03:06:50
+# RuleCount：711
 DOMAIN, vsmarketplacebadge.apphb.com
 DOMAIN, bj1.api.bing.com
 DOMAIN, emoi-cncdn.bing.com
@@ -340,6 +340,7 @@ DOMAIN-SUFFIX, microsoftonline.com
 DOMAIN-SUFFIX, microsoftonline-p.com
 DOMAIN-SUFFIX, microsoftpartnercommunity.com
 DOMAIN-SUFFIX, microsoftpartnersolutions.com
+DOMAIN-SUFFIX, microsoftpersonalcontent.com
 DOMAIN-SUFFIX, microsoftready.com
 DOMAIN-SUFFIX, microsoftsilverlight.com
 DOMAIN-SUFFIX, microsoftsiteselection.com

@@ -1,5 +1,5 @@
-# UpdateTime：2025-12-06 03:05:50
-# RuleCount：717
+# UpdateTime：2025-12-08 03:06:47
+# RuleCount：718
 DOMAIN, lens.l.google.com
 DOMAIN, mtalk.google.com
 DOMAIN, safebrowsing-cache.google.com
@@ -412,6 +412,7 @@ DOMAIN-SUFFIX, google.com.gh
 DOMAIN-SUFFIX, google.com.gi
 DOMAIN-SUFFIX, goo.gl
 DOMAIN-SUFFIX, google.gl
+DOMAIN-SUFFIX, c.gle
 DOMAIN-SUFFIX, chat.gle
 DOMAIN-SUFFIX, hey.gle
 DOMAIN-SUFFIX, ok.gle
