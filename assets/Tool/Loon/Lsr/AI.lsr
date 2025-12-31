@@ -49,6 +49,7 @@ DOMAIN, aisandbox-pa.googleapis.com
 
 # Google Antigravity
 DOMAIN, antigravity.google
+AND, ((DOMAIN-KEYWORD, antigravity-auto-updater-), (DOMAIN-SUFFIX, run.app))
 
 # Anthropic
 DOMAIN-SUFFIX, anthropic.com
