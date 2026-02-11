@@ -1,5 +1,5 @@
-# UpdateTime：2026-02-08 03:07:51
-# RuleCount：1861
+# UpdateTime：2026-02-11 03:08:06
+# RuleCount：1865
 DOMAIN, edge.apple
 DOMAIN, api.smoot.apple.cn
 DOMAIN, appldnld.g.aaplimg.com
@@ -1553,6 +1553,7 @@ DOMAIN-SUFFIX, gsp4-cn.ls.apple.com.edgekey.net
 DOMAIN-SUFFIX, store.apple.com.edgekey.net
 DOMAIN-SUFFIX, www.apple.com.edgekey.net
 DOMAIN-SUFFIX, itunes.com.edgekey.net
+DOMAIN-SUFFIX, appldnld.apple.com.edgesuite.net
 DOMAIN-SUFFIX, ls.apple.com.edgesuite.net
 DOMAIN-SUFFIX, faceid99.net
 DOMAIN-SUFFIX, facetime.net
@@ -1861,3 +1862,6 @@ IP-CIDR, 144.178.48.0/20, no-resolve
 IP-CIDR, 192.35.50.0/24, no-resolve
 IP-CIDR, 198.183.17.0/24, no-resolve
 IP-CIDR, 205.180.175.0/24, no-resolve
+IP-CIDR6, 2403:300::/32, no-resolve
+IP-CIDR6, 2620:149::/32, no-resolve
+IP-CIDR6, 2a01:b740::/32, no-resolve
