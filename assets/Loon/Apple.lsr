@@ -1,5 +1,5 @@
-# UpdateTime：2026-03-02 03:09:49
-# RuleCount：1865
+# UpdateTime：2026-03-06 03:09:08
+# RuleCount：1866
 DOMAIN, edge.apple
 DOMAIN, api.smoot.apple.cn
 DOMAIN, appldnld.g.aaplimg.com
@@ -393,6 +393,7 @@ DOMAIN-SUFFIX, researchkit.com.cn
 DOMAIN-SUFFIX, swiftui.com.cn
 DOMAIN-SUFFIX, faceshift.cn
 DOMAIN-SUFFIX, homepod.cn
+DOMAIN-SUFFIX, icloud.cn
 DOMAIN-SUFFIX, icloud-apple.cn
 DOMAIN-SUFFIX, icloudapple.cn
 DOMAIN-SUFFIX, insidear.cn
