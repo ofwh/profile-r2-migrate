@@ -1,4 +1,4 @@
-# Update at 2026-03-15 07:25:59
+# Update at 2026-03-16 07:51:39
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=CN]
 /ipv6 firewall address-list
 add address=2001:250::/30 list=CN
@@ -1334,8 +1334,8 @@ add address=2a0e:aa07:e210::/48 list=CN
 add address=2a0e:aa07:e21c::/47 list=CN
 add address=2a0e:aa07:e220::/44 list=CN
 add address=2a0e:aa07:e280::/45 list=CN
-add address=2a0e:aa07:e288::/46 list=CN
-add address=2a0e:aa07:e28c::/47 list=CN
+add address=2a0e:aa07:e288::/47 list=CN
+add address=2a0e:aa07:e28a::/48 list=CN
 add address=2a0e:aa07:e28e::/48 list=CN
 add address=2a0e:aa07:f0d0::/46 list=CN
 add address=2a0e:aa07:f0d4::/47 list=CN
