@@ -1,4 +1,4 @@
-# Update at 2026-03-22 07:11:06
+# Update at 2026-03-23 07:42:18
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.1.8.0/24 list=CN
@@ -375,7 +375,6 @@ add address=44.32.191.0/24 list=CN
 add address=44.32.192.0/24 list=CN
 add address=45.9.11.0/24 list=CN
 add address=45.40.192.0/18 list=CN
-add address=45.62.168.0/24 list=CN
 add address=45.65.20.0/22 list=CN
 add address=45.65.24.0/22 list=CN
 add address=45.112.232.0/22 list=CN
@@ -3074,7 +3073,6 @@ add address=192.140.160.0/19 list=CN
 add address=192.140.208.0/21 list=CN
 add address=192.144.128.0/17 list=CN
 add address=192.163.11.0/24 list=CN
-add address=192.208.13.0/24 list=CN
 add address=192.232.97.0/24 list=CN
 add address=193.112.0.0/16 list=CN
 add address=193.119.0.0/24 list=CN
@@ -4580,7 +4578,9 @@ add address=2406:840:fa60::/44 list=CN
 add address=2406:840:fc10::/44 list=CN
 add address=2406:840:fc20::/43 list=CN
 add address=2406:840:fc40::/42 list=CN
-add address=2406:840:fc80::/45 list=CN
+add address=2406:840:fc80::/46 list=CN
+add address=2406:840:fc84::/48 list=CN
+add address=2406:840:fc86::/47 list=CN
 add address=2406:840:fc88::/48 list=CN
 add address=2406:840:fc8f::/48 list=CN
 add address=2406:840:fc90::/44 list=CN
@@ -5477,7 +5477,7 @@ add address=2a0e:aa07:e21c::/47 list=CN
 add address=2a0e:aa07:e220::/44 list=CN
 add address=2a0e:aa07:e280::/45 list=CN
 add address=2a0e:aa07:e288::/46 list=CN
-add address=2a0e:aa07:e28c::/47 list=CN
+add address=2a0e:aa07:e28c::/48 list=CN
 add address=2a0e:aa07:e28e::/48 list=CN
 add address=2a0e:aa07:f0d0::/46 list=CN
 add address=2a0e:aa07:f0d4::/47 list=CN
@@ -5679,7 +5679,6 @@ add address=2a14:7583:f743::/48 list=CN
 add address=2a14:7583:f744::/48 list=CN
 add address=2a14:7583:f764::/48 list=CN
 add address=2a14:7586:6100::/45 list=CN
-add address=2a14:7586:6110::/48 list=CN
 add address=2a14:7dc0:510::/47 list=CN
 add address=2a14:7dc0:515::/48 list=CN
 add address=2a14:7dc0:516::/47 list=CN
