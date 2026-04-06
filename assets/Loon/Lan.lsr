@@ -1,5 +1,5 @@
-# UpdateTime：2026-04-04 03:07:32
-# RuleCount：139
+# UpdateTime：2026-04-06 03:07:14
+# RuleCount：138
 DOMAIN, instant.arubanetworks.com
 DOMAIN, setmeup.arubanetworks.com
 DOMAIN, router.asus.com
@@ -110,7 +110,6 @@ DOMAIN-SUFFIX, peiluyou.com
 DOMAIN-SUFFIX, localhost.ptlogin2.qq.com
 DOMAIN-SUFFIX, localhost.sec.qq.com
 DOMAIN-SUFFIX, routerlogin.com
-DOMAIN-SUFFIX, test.steampowered.com
 DOMAIN-SUFFIX, tendawifi.com
 DOMAIN-SUFFIX, router.ctc
 DOMAIN-SUFFIX, plex.direct
