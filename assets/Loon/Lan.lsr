@@ -1,11 +1,12 @@
-# UpdateTime：2026-04-12 03:11:43
-# RuleCount：138
+# UpdateTime：2026-04-14 03:07:43
+# RuleCount：140
 DOMAIN, instant.arubanetworks.com
 DOMAIN, setmeup.arubanetworks.com
 DOMAIN, router.asus.com
 DOMAIN, asusrouter.com
 DOMAIN, www.asusrouter.com
 DOMAIN, oasisauth.h3c.com
+DOMAIN, local.adguard.org
 DOMAIN-SUFFIX, home.arpa
 DOMAIN-SUFFIX, 10.in-addr.arpa
 DOMAIN-SUFFIX, 100.100.in-addr.arpa
@@ -106,6 +107,7 @@ DOMAIN-SUFFIX, leike.cc
 DOMAIN-SUFFIX, wifi.cmcc
 DOMAIN-SUFFIX, tplogin.cn
 DOMAIN-SUFFIX, hiwifi.com
+DOMAIN-SUFFIX, kis.v2.scr.kaspersky-labs.com
 DOMAIN-SUFFIX, peiluyou.com
 DOMAIN-SUFFIX, localhost.ptlogin2.qq.com
 DOMAIN-SUFFIX, localhost.sec.qq.com
