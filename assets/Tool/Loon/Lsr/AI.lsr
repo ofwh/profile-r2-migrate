@@ -1,4 +1,4 @@
-# 2026-04-13 11:34:56
+# 2026-04-15 22:19:14
 # OpenAI
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-), (DOMAIN-SUFFIX, webpubsub.azure.com))
 AND, ((DOMAIN-KEYWORD, openaicom-api-), (DOMAIN-SUFFIX, azurefd.net))
@@ -150,14 +150,11 @@ DOMAIN, integrate.api.nvidia.com
 # Kiro
 DOMAIN-SUFFIX, kiro.dev
 
-# AWS Bedrock
-aws.amazon.com
-
 # CerebrasAI
-cerebras.ai
+DOMAIN-SUFFIX, cerebras.ai
 
 # MiniMax国际版
-minimax.io
+DOMAIN-SUFFIX, minimax.io
 
 # 智谱国际版
-z.ai
+DOMAIN-SUFFIX, z.ai
