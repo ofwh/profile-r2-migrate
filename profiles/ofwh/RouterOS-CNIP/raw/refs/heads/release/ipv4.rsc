@@ -1,4 +1,4 @@
-# Update at 2026-05-03 08:17:23
+# Update at 2026-05-04 08:43:24
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.1.8.0/24 list=CN
@@ -2759,7 +2759,6 @@ add address=144.79.70.0/23 list=CN
 add address=144.123.0.0/16 list=CN
 add address=144.225.186.0/24 list=CN
 add address=144.255.0.0/16 list=CN
-add address=145.6.0.0/16 list=CN
 add address=145.14.71.0/24 list=CN
 add address=145.14.72.0/22 list=CN
 add address=145.14.81.0/24 list=CN
@@ -2874,7 +2873,6 @@ add address=156.107.181.0/24 list=CN
 add address=156.237.104.0/23 list=CN
 add address=156.242.5.0/24 list=CN
 add address=157.0.0.0/16 list=CN
-add address=157.10.34.0/23 list=CN
 add address=157.10.112.0/23 list=CN
 add address=157.15.94.0/23 list=CN
 add address=157.15.104.0/23 list=CN
