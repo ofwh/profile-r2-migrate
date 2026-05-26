@@ -1,0 +1,18 @@
+#!name=车来了
+#!desc=屏蔽车来了微信小程序广告
+#!icon=https://raw.githubusercontent.com/ofwh/Profiles/main/Loon/Icons/WeRead.png
+
+[Rule]
+DOMAIN-SUFFIX, atrace.chelaile.net.cn
+DOMAIN, logs.chelaile.net.cn
+DOMAIN, ad.chelaile.net.cn
+URL-REGEX,^https://web\.chelaile\.net\.cn\/adpub
+URL-REGEX,^https://web\.chelaile\.net\.cn\/api\/adpub
+URL-REGEX,^https://cdn\.chelaile\.net\.cn\/adpub
+URL-REGEX,^https://cdn\.chelaile\.net\.cn\/api\/adpub
+
+[Script]
+
+
+[MitM]
+hostname = atrace.chelaile.net.cn,logs.chelaile.net.cn,ad.chelaile.net.cn,web.chelaile.net.cn,cdn.chelaile.net.cn
