@@ -10,6 +10,8 @@ URL-REGEX,^https://web\.chelaile\.net\.cn\/adpub, REJECT
 URL-REGEX,^https://web\.chelaile\.net\.cn\/api\/adpub, REJECT
 URL-REGEX,^https://cdn\.chelaile\.net\.cn\/adpub, REJECT
 URL-REGEX,^https://cdn\.chelaile\.net\.cn\/api\/adpub, REJECT
+URL-REGEX,^https://cdn\.web\.chelaileapp\.cn\/adpub, REJECT
+URL-REGEX,^https://cdn\.web\.chelaileapp\.cn\/api\/adpub, REJECT
 
 [Script]
 
