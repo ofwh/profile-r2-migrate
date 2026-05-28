@@ -1,15 +1,15 @@
 #!name=车来了
 #!desc=屏蔽车来了微信小程序广告
-#!icon=https://raw.githubusercontent.com/ofwh/Profiles/main/Loon/Icons/WeRead.png
+#!icon=https://raw.githubusercontent.com/ofwh/Profiles/main/Loon/Icons/CheLaiLe.webp
 
 [Rule]
-DOMAIN-SUFFIX, atrace.chelaile.net.cn
-DOMAIN, logs.chelaile.net.cn
-DOMAIN, ad.chelaile.net.cn
-URL-REGEX,^https://web\.chelaile\.net\.cn\/adpub
-URL-REGEX,^https://web\.chelaile\.net\.cn\/api\/adpub
-URL-REGEX,^https://cdn\.chelaile\.net\.cn\/adpub
-URL-REGEX,^https://cdn\.chelaile\.net\.cn\/api\/adpub
+DOMAIN-SUFFIX, atrace.chelaile.net.cn, REJECT
+DOMAIN, logs.chelaile.net.cn, REJECT
+DOMAIN, ad.chelaile.net.cn, REJECT
+URL-REGEX,^https://web\.chelaile\.net\.cn\/adpub, REJECT
+URL-REGEX,^https://web\.chelaile\.net\.cn\/api\/adpub, REJECT
+URL-REGEX,^https://cdn\.chelaile\.net\.cn\/adpub, REJECT
+URL-REGEX,^https://cdn\.chelaile\.net\.cn\/api\/adpub, REJECT
 
 [Script]
 
