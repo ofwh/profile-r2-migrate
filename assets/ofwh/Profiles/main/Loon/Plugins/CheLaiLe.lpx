@@ -12,6 +12,12 @@ URL-REGEX,^https://cdn\.chelaile\.net\.cn\/adpub, REJECT
 URL-REGEX,^https://cdn\.chelaile\.net\.cn\/api\/adpub, REJECT
 URL-REGEX,^https://cdn\.web\.chelaileapp\.cn\/adpub, REJECT
 URL-REGEX,^https://cdn\.web\.chelaileapp\.cn\/api\/adpub, REJECT
+URL-REGEX,^https://cdn\.api\.chelaile\.net\.cn\/adpub, REJECT
+URL-REGEX,^https://cdn\.api\.chelaile\.net\.cn\/api\/adpub, REJECT
+URL-REGEX,^https://cdn\.api\.chelaileapp\.cn\/adpub, REJECT
+URL-REGEX,^https://cdn\.api\.chelaileapp\.cn\/api\/adpub, REJECT
+URL-REGEX,^https://124\.70\.194\.16\/adpub, REJECT
+URL-REGEX,^https://124\.70\.194\.16\/api\/adpub, REJECT
 
 [Script]
 
