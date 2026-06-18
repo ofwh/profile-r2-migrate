@@ -1,4 +1,4 @@
-# Update at 2026-06-17 11:19:10
+# Update at 2026-06-18 10:50:34
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.1.8.0/24 list=CN
@@ -1138,7 +1138,7 @@ add address=103.78.126.0/23 list=CN
 add address=103.78.228.0/22 list=CN
 add address=103.79.24.0/22 list=CN
 add address=103.79.200.0/22 list=CN
-add address=103.79.228.0/24 list=CN
+add address=103.79.228.0/23 list=CN
 add address=103.81.4.0/22 list=CN
 add address=103.81.48.0/22 list=CN
 add address=103.81.123.0/24 list=CN
@@ -1282,7 +1282,6 @@ add address=103.146.126.0/23 list=CN
 add address=103.147.124.0/24 list=CN
 add address=103.149.242.0/24 list=CN
 add address=103.149.244.0/22 list=CN
-add address=103.150.10.0/23 list=CN
 add address=103.150.24.0/23 list=CN
 add address=103.150.164.0/23 list=CN
 add address=103.151.148.0/23 list=CN
@@ -3239,6 +3238,7 @@ add address=192.163.11.0/24 list=CN
 add address=192.232.97.0/24 list=CN
 add address=193.112.0.0/16 list=CN
 add address=193.233.49.0/24 list=CN
+add address=194.127.229.0/24 list=CN
 add address=194.138.202.0/23 list=CN
 add address=194.138.245.0/24 list=CN
 add address=194.231.140.0/24 list=CN
@@ -3609,7 +3609,6 @@ add address=203.118.248.0/22 list=CN
 add address=203.119.25.0/24 list=CN
 add address=203.119.26.0/23 list=CN
 add address=203.119.28.0/22 list=CN
-add address=203.119.33.0/24 list=CN
 add address=203.119.80.0/24 list=CN
 add address=203.119.83.0/24 list=CN
 add address=203.119.114.0/23 list=CN
@@ -3651,7 +3650,6 @@ add address=203.176.170.0/24 list=CN
 add address=203.187.160.0/19 list=CN
 add address=203.189.0.0/23 list=CN
 add address=203.189.6.0/23 list=CN
-add address=203.189.115.0/24 list=CN
 add address=203.189.192.0/19 list=CN
 add address=203.189.240.0/22 list=CN
 add address=203.190.100.0/23 list=CN
@@ -3696,7 +3694,6 @@ add address=203.223.21.0/24 list=CN
 add address=204.14.76.0/24 list=CN
 add address=204.235.241.0/24 list=CN
 add address=206.109.75.0/24 list=CN
-add address=209.137.186.0/24 list=CN
 add address=210.2.0.0/23 list=CN
 add address=210.2.4.0/24 list=CN
 add address=210.5.0.0/19 list=CN
