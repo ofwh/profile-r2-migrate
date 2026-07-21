@@ -10,7 +10,7 @@
 ^https?:\/\/(rule\.)?kelee\.one\/ response-header-add Content-Disposition inline
 ^https?:\/\/(rule\.)?kelee\.one\/ response-header-replace Content-Type text/plain;\x20charset=utf-8
 
-^https?://(.*)?popcap.com/2/bejeweled-premium/ response-body-json-replace .ads []
+^https?://(.*)?popcap.com/2/bejeweled-premium/ response-body-json-replace data.ads []
 
 [Script]
 # 黑料网 //18hlw.com, 8olbt.imsatcmn.cc
@@ -21,4 +21,4 @@ http-response ^https:\/\/missav\.(?:ai|fans|ws)\/(?!favicon)(?!(build|fonts|img|
 http-response ^https:\/\/cn\.pornhub\.com\/ script-path=https://raw.bofoi.com/assets/ifflagged/Romeo/raw/main/Modules/JavaScript/rucu6/webpage/rucu6.pages.dev_pornhub.js, requires-body=true, timeout=10, tag=去广告
 
 [MITM]
-hostname = kelee.one,*.kelee.one,18hlw.com,*.imsatcmn.cc,missav.ai,missav.fans,missav.ws
+hostname = kelee.one,*.kelee.one,18hlw.com,*.imsatcmn.cc,missav.ai,missav.fans,missav.ws,*.popcap.com
