@@ -10,8 +10,7 @@
 ^https?://(rule\.)?kelee.one response-header-add Content-Disposition inline
 ^https?://(rule\.)?kelee.one response-header-replace Content-Type text/plain;\x20charset=utf-8
 # Bejeweled 3 广告
-#^https?://(.*)?popcap.com/2/bejeweled-premium/ response-body-json-replace data.ads []
-^https?://(.*)?popcap.com/2/bejeweled-premium/ response-body-json-del data.ads[0]
+^https?://(.*)?popcap.com response-body-json-replace data.ads []
 
 [Script]
 # 黑料网 //18hlw.com, 8olbt.imsatcmn.cc
