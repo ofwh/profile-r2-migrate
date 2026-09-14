@@ -1,4 +1,4 @@
-# Update at 2026-09-13 12:09:15
+# Update at 2026-09-14 13:05:57
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.1.8.0/24 list=CN
@@ -144,7 +144,6 @@ add address=39.64.0.0/11 list=CN
 add address=39.96.0.0/13 list=CN
 add address=39.104.0.0/14 list=CN
 add address=39.108.0.0/16 list=CN
-add address=39.109.50.0/23 list=CN
 add address=39.125.80.0/24 list=CN
 add address=39.128.0.0/10 list=CN
 add address=40.72.0.0/15 list=CN
@@ -824,7 +823,6 @@ add address=82.139.194.0/24 list=CN
 add address=82.139.204.0/24 list=CN
 add address=82.139.219.0/24 list=CN
 add address=82.152.129.0/24 list=CN
-add address=82.152.142.0/24 list=CN
 add address=82.153.216.0/24 list=CN
 add address=82.156.0.0/15 list=CN
 add address=87.76.221.0/24 list=CN
@@ -2577,6 +2575,7 @@ add address=123.49.231.0/24 list=CN
 add address=123.49.232.0/24 list=CN
 add address=123.49.240.0/24 list=CN
 add address=123.49.242.0/23 list=CN
+add address=123.49.245.0/24 list=CN
 add address=123.52.0.0/14 list=CN
 add address=123.56.0.0/15 list=CN
 add address=123.58.0.0/19 list=CN
@@ -5693,6 +5692,7 @@ add address=2602:f46d:1::/48 list=CN
 add address=2602:f486:f0::/48 list=CN
 add address=2602:f92a:1300::/48 list=CN
 add address=2602:f92a:1303::/48 list=CN
+add address=2602:f92a:1310::/48 list=CN
 add address=2602:f92a:a460::/48 list=CN
 add address=2602:f92a:a462::/47 list=CN
 add address=2602:f92a:a468::/48 list=CN
@@ -5704,7 +5704,6 @@ add address=2602:f9f6:400::/47 list=CN
 add address=2602:f9f6:402::/48 list=CN
 add address=2602:f9f6:450::/48 list=CN
 add address=2602:fa02:36::/48 list=CN
-add address=2602:fa02:58::/48 list=CN
 add address=2602:fa02:d00::/40 list=CN
 add address=2602:faa8:702::/48 list=CN
 add address=2602:faa8:708::/47 list=CN
@@ -5854,7 +5853,6 @@ add address=2a0f:6280:1400::/43 list=CN
 add address=2a0f:6280:1440::/42 list=CN
 add address=2a0f:6280:1480::/44 list=CN
 add address=2a0f:6281::/32 list=CN
-add address=2a0f:6284:4c00::/44 list=CN
 add address=2a0f:6284:4c20::/44 list=CN
 add address=2a0f:6284:4c30::/48 list=CN
 add address=2a0f:6284:4c40::/43 list=CN
