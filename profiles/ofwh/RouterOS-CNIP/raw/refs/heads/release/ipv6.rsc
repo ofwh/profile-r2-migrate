@@ -1,4 +1,4 @@
-# Update at 2026-09-23 11:53:13
+# Update at 2026-09-24 12:00:26
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=CN]
 /ipv6 firewall address-list
 add address=2001:250::/30 list=CN
@@ -115,6 +115,7 @@ add address=2401:800::/32 list=CN
 add address=2401:1160::/32 list=CN
 add address=2401:1200::/48 list=CN
 add address=2401:1320::/32 list=CN
+add address=2401:18ef:1000::/44 list=CN
 add address=2401:1d40::/32 list=CN
 add address=2401:2780::/32 list=CN
 add address=2401:2a00:f000::/43 list=CN
@@ -550,6 +551,7 @@ add address=2406:840:6c1::/48 list=CN
 add address=2406:840:710::/48 list=CN
 add address=2406:840:800::/46 list=CN
 add address=2406:840:806::/48 list=CN
+add address=2406:840:841::/48 list=CN
 add address=2406:840:842::/48 list=CN
 add address=2406:840:860::/48 list=CN
 add address=2406:840:880::/46 list=CN
@@ -1470,7 +1472,6 @@ add address=2a06:9801:1300::/40 list=CN
 add address=2a06:9f81:4600::/44 list=CN
 add address=2a06:9f81:4620::/44 list=CN
 add address=2a06:9f81:4640::/43 list=CN
-add address=2a06:9f81:4660::/44 list=CN
 add address=2a06:a005:260::/43 list=CN
 add address=2a06:a005:280::/43 list=CN
 add address=2a06:a005:2a0::/44 list=CN
@@ -1545,7 +1546,6 @@ add address=2a0f:1cc5:3203::/48 list=CN
 add address=2a0f:1cc5:3222::/48 list=CN
 add address=2a0f:1cc5:3700::/43 list=CN
 add address=2a0f:1cc5:3720::/48 list=CN
-add address=2a0f:1cc5:4300::/40 list=CN
 add address=2a0f:1cc5:4400::/40 list=CN
 add address=2a0f:1cc5:4508::/45 list=CN
 add address=2a0f:1cc5:4510::/44 list=CN
@@ -1584,8 +1584,7 @@ add address=2a10:ccc0:ccc::/48 list=CN
 add address=2a10:fa81:d00::/40 list=CN
 add address=2a10:fa86::/34 list=CN
 add address=2a10:fa86:c000::/34 list=CN
-add address=2a12:3fc6::/47 list=CN
-add address=2a12:3fc6:3::/48 list=CN
+add address=2a12:3fc6::/46 list=CN
 add address=2a12:cb40:1::/48 list=CN
 add address=2a12:cb40:2::/48 list=CN
 add address=2a12:cb41:600::/44 list=CN
