@@ -1,11 +1,13 @@
-# UpdateTime：2026-10-19 03:14:04
-# RuleCount：140
+# UpdateTime：2026-10-21 03:14:58
+# RuleCount：142
 DOMAIN, instant.arubanetworks.com
 DOMAIN, setmeup.arubanetworks.com
 DOMAIN, router.asus.com
 DOMAIN, asusrouter.com
 DOMAIN, www.asusrouter.com
 DOMAIN, oasisauth.h3c.com
+DOMAIN, localhost.weixin.qq.com
+DOMAIN, localhost.work.weixin.qq.com
 DOMAIN, local.adguard.org
 DOMAIN-SUFFIX, home.arpa
 DOMAIN-SUFFIX, 10.in-addr.arpa
