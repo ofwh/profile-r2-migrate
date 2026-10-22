@@ -1,4 +1,4 @@
-# Update at 2026-10-21 12:05:31
+# Update at 2026-10-22 12:10:26
 /ip firewall address-list remove [/ip firewall address-list find list=CN]
 /ip firewall address-list
 add address=1.1.8.0/24 list=CN
@@ -3099,7 +3099,6 @@ add address=163.223.178.0/23 list=CN
 add address=163.227.40.0/23 list=CN
 add address=163.228.0.0/16 list=CN
 add address=163.244.246.0/24 list=CN
-add address=164.163.236.0/22 list=CN
 add address=165.101.70.0/24 list=CN
 add address=165.101.208.0/23 list=CN
 add address=166.111.0.0/16 list=CN
@@ -4491,9 +4490,6 @@ add address=2401:b400:16::/47 list=CN
 add address=2401:b400:20::/47 list=CN
 add address=2401:b680::/32 list=CN
 add address=2401:be00::/32 list=CN
-add address=2401:c020:6::/48 list=CN
-add address=2401:c020:8::/47 list=CN
-add address=2401:c020:14::/48 list=CN
 add address=2401:ca00::/32 list=CN
 add address=2401:cb80::/32 list=CN
 add address=2401:cc00::/32 list=CN
@@ -4541,6 +4537,7 @@ add address=2402:4440:a810::/46 list=CN
 add address=2402:4b80::/32 list=CN
 add address=2402:4e00::/32 list=CN
 add address=2402:5920::/48 list=CN
+add address=2402:5e40::/32 list=CN
 add address=2402:5ec0::/32 list=CN
 add address=2402:6e80::/32 list=CN
 add address=2402:6f40::/48 list=CN
@@ -4902,7 +4899,7 @@ add address=2406:840:9700::/40 list=CN
 add address=2406:840:9804::/46 list=CN
 add address=2406:840:981a::/48 list=CN
 add address=2406:840:981c::/46 list=CN
-add address=2406:840:9962::/47 list=CN
+add address=2406:840:9962::/48 list=CN
 add address=2406:840:9964::/48 list=CN
 add address=2406:840:9966::/47 list=CN
 add address=2406:840:996c::/48 list=CN
@@ -5772,7 +5769,6 @@ add address=2605:9d80:9033::/48 list=CN
 add address=2605:9d80:9042::/48 list=CN
 add address=2605:9d80:9071::/48 list=CN
 add address=2605:9d80:9092::/48 list=CN
-add address=2620:57:4004::/47 list=CN
 add address=2804:1e48:9002::/48 list=CN
 add address=2a04:3e00::/29 list=CN
 add address=2a04:f580:8010::/47 list=CN
