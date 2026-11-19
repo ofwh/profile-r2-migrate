@@ -1,4 +1,4 @@
-# Update at 2026-11-18 15:51:32
+# Update at 2026-11-19 15:55:19
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=CN]
 /ipv6 firewall address-list
 add address=2001:250::/30 list=CN
@@ -543,7 +543,7 @@ add address=2406:840:2e0::/48 list=CN
 add address=2406:840:380::/47 list=CN
 add address=2406:840:3c2::/48 list=CN
 add address=2406:840:3e0::/48 list=CN
-add address=2406:840:411::/48 list=CN
+add address=2406:840:410::/47 list=CN
 add address=2406:840:420::/48 list=CN
 add address=2406:840:480::/48 list=CN
 add address=2406:840:540::/48 list=CN
@@ -695,9 +695,7 @@ add address=2406:840:fedc::/48 list=CN
 add address=2406:840:feed::/48 list=CN
 add address=2406:840:fef2::/47 list=CN
 add address=2406:840:fef4::/46 list=CN
-add address=2406:840:fef8::/46 list=CN
-add address=2406:840:fefc::/47 list=CN
-add address=2406:840:fefe::/48 list=CN
+add address=2406:840:fef8::/45 list=CN
 add address=2406:840:ff00::/43 list=CN
 add address=2406:1080::/48 list=CN
 add address=2406:1e40:f012::/47 list=CN
@@ -1563,6 +1561,7 @@ add address=2a0e:aa07:f0df::/48 list=CN
 add address=2a0e:b107:740::/44 list=CN
 add address=2a0e:b107:da0::/44 list=CN
 add address=2a0e:b107:14a0::/44 list=CN
+add address=2a0e:b107:1522::/48 list=CN
 add address=2a0e:b107:2440::/44 list=CN
 add address=2a0e:c780::/30 list=CN
 add address=2a0e:f202::/31 list=CN
@@ -1600,6 +1599,7 @@ add address=2a0f:1cc5:2680::/42 list=CN
 add address=2a0f:1cc5:3203::/48 list=CN
 add address=2a0f:1cc5:3210::/44 list=CN
 add address=2a0f:1cc5:3222::/48 list=CN
+add address=2a0f:1cc5:3500::/40 list=CN
 add address=2a0f:1cc5:3700::/43 list=CN
 add address=2a0f:1cc5:3720::/48 list=CN
 add address=2a0f:1cc5:4508::/45 list=CN
@@ -1667,6 +1667,7 @@ add address=2a12:3fc6::/46 list=CN
 add address=2a12:3fc6:4::/48 list=CN
 add address=2a12:cb41:600::/44 list=CN
 add address=2a12:cb41:1300::/44 list=CN
+add address=2a12:cb41:13f0::/44 list=CN
 add address=2a12:cb46:6000::/38 list=CN
 add address=2a12:cb46:6400::/44 list=CN
 add address=2a12:cb47:ffff::/48 list=CN
